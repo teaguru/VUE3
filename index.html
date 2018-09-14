@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+<body>
+
+<div id="app">
+    <ul>
+        <li v-for="bear in bears">{{  bear }} </li>
+    </ul>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.min.js"></script>
+<script>
+    new Vue({
+    el: "#app",
+    data: {
+        bears: [
+                'гризли',
+                'белый',
+                'панда',
+                'губач',
+
+
+        ]
+    }
+})
+</script>
+</body>
+</html>
