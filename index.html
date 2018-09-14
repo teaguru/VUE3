@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Vue</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="app">
     <ul>
-        <li v-for="bear in bears">{{  bear }} </li>
+        <li v-for="bear in bears" :class="{'strike':bear.status}">{{  bear.name }} </li>
     </ul>
 
 </div>
@@ -19,10 +20,18 @@
     el: "#app",
     data: {
         bears: [
-                'гризли',
-                'белый',
-                'панда',
-                'губач',
+            {
+                name: 'гризли',
+                status: false },
+            {
+                name: 'белый',
+                status: false },
+            {
+                name: 'панда',
+                status: true },
+            {
+                name: 'губач',
+                status: false },
 
 
         ]
